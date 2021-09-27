@@ -3,11 +3,13 @@ class Propietario {
         this._nombre = nombre;
         this._direccion = direccion;
         this._telefono = telefono;
+    } 
+    datosPropietario(){
+        return `El Nombre del dueño es: ${this.nombre}. El Domicilio es: ${this.direccion}, y el numero telefonico de contacto: ${this.telefono}`
     }
-    
-}
+};
 
-class Animal extends Propietario {//clase hijo de propietario
+class Animal extends Propietario {       //clase hijo de propietario
     constructor (tipo){
         this._tipo = tipo; 
     }
@@ -36,4 +38,27 @@ class Mascota extends Animal {
     set enfermedad(enfermedadNueva){
         this._enfermedad = enfermedadNueva;
     }
+}
+let agregar = document.getElementsByTagName('button');
+
+agregar.addEventListener('click', observando);
+
+function agregando(){
+    let nombre = document.getElementById("propietario").value;
+    let direccion = document.getElementById("telefono").value;
+    let telefono = document.getElementById("direccion").value;
+    let tipo = document.getElementById("tipo").value
+    let nombreMascota = document.getElementById("nombreMascota").value;
+    let enfermedad = document.getElementById("direccion").value;
+
+}
+
+function observando() {
+    const nombreData = agregando();
+    const nombre = nombreData.nombre;
+    const direccion = nombreData.direccion;
+    const telefono = nombreData.telefono;
+    const tipo = nombreData.tipo;
+    const nombreMascota = nombreData.nombreMascota;
+    const enfermedad = nombreData.enfermedad;
 }
